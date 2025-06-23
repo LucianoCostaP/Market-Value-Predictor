@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# PyCaret
+*.pkl
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Data & logs
+*.log
+data/raw_stats/
+data/transfers/
+data/*.csv
+data/*.parquet
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
