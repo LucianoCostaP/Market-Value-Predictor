@@ -181,12 +181,9 @@ def prepare_stats(stats):
     return stats
 
 
-def prepare_data(season, stats_path, transfers_path):
+def prepare_data(season, stats, transfers):
     years = season.split("-")
     second_year = years[1]
-    
-    stats = pd.read_csv(stats_path)
-    transfers = pd.read_csv(transfers_path)
 
     stats = remove_null_ids(stats, "player_id")
     stats = prepare_stats(stats)

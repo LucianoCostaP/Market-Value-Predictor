@@ -1,4 +1,10 @@
 import sys
+import os
+
+ROOT_PROJECT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if ROOT_PROJECT_PATH not in sys.path:
+    sys.path.insert(0, ROOT_PROJECT_PATH)
+
 from marketvalue.config import ROOT_DIR, RAW_STATS_DIR, TRANSFERS_DIR
 # Añadir la raíz del proyecto al PYTHONPATH
 sys.path.append(str(ROOT_DIR))
@@ -115,9 +121,8 @@ def obtener_transferencias(stats_with_ids, trmkt, transfers_dir, tipo="field_pla
 
 
 def main():
-    #leagues = ["Danish Superliga", "Eredivise", "Primeira Liga Portugal", "Belgian Pro League"]
-    leagues = ["Primera Division Uruguay"]
-    seasons = ['2021','2022','2023', '2024', '2025']
+    leagues = ["Saudi League"]
+    seasons = ['2021-2022', '2023-2024', '2022-2023', '2024-2025']
 
     fbref = ls.Fbref()
     trmkt = ls.Transfermarkt()
