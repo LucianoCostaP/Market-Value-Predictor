@@ -1,0 +1,13 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: scikit-learn in /home/marcos/.local/lib/python3.10/site-packages (1.7.0)
+Requirement already satisfied: sktime in /home/marcos/.local/lib/python3.10/site-packages (0.38.1)
+Requirement already satisfied: numpy>=1.22.0 in /home/marcos/.local/lib/python3.10/site-packages (from scikit-learn) (1.24.4)
+Requirement already satisfied: scipy>=1.8.0 in /home/marcos/.local/lib/python3.10/site-packages (from scikit-learn) (1.15.3)
+Requirement already satisfied: joblib>=1.2.0 in /home/marcos/.local/lib/python3.10/site-packages (from scikit-learn) (1.5.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /home/marcos/.local/lib/python3.10/site-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: packaging in /home/marcos/.local/lib/python3.10/site-packages (from sktime) (25.0)
+Requirement already satisfied: pandas<2.4.0,>=1.1 in /home/marcos/.local/lib/python3.10/site-packages (from sktime) (1.5.3)
+Requirement already satisfied: scikit-base<0.13.0,>=0.6.1 in /home/marcos/.local/lib/python3.10/site-packages (from sktime) (0.12.3)
+Requirement already satisfied: python-dateutil>=2.8.1 in /home/marcos/.local/lib/python3.10/site-packages (from pandas<2.4.0,>=1.1->sktime) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /usr/lib/python3/dist-packages (from pandas<2.4.0,>=1.1->sktime) (2022.1)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.8.1->pandas<2.4.0,>=1.1->sktime) (1.16.0)

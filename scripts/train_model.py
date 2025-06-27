@@ -9,6 +9,7 @@ from marketvalue.config import (
     STATS_FIELD_PLAYERS_PATH,
     TRANSFERS_FIELD_PLAYERS_PATH,
     SEASON,
+    STATS_NEWS_PATH,
     PRODUCTION_DATA_PATH,
     TRAINING_DATA_PATH,
     MODEL_PATH,
@@ -22,8 +23,9 @@ from marketvalue.feature_engineering import train_pycaret_model
 def main():
     stats_field_players = pd.read_csv(STATS_FIELD_PLAYERS_PATH)
     transfers_field_players = pd.read_csv(TRANSFERS_FIELD_PLAYERS_PATH)
+    player_news_stats = pd.read_csv(STATS_NEWS_PATH)
 
-    data_training, data_production = prepare_data(SEASON, stats_field_players, transfers_field_players)
+    data_training, data_production = prepare_data(SEASON, stats_field_players, transfers_field_players, player_news_stats)
     
     data_training, target = build_dataset(data_training)
     data_training["fee"] = target

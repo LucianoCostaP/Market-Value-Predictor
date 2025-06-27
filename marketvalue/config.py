@@ -9,6 +9,7 @@ PLAYERS_IDS_PATH = ROOT_DIR / "data" / "players" / "players_ids.csv"
 
 STATS_FIELD_PLAYERS_PATH = RAW_STATS_DIR / "all_stats_field_players.csv"
 STATS_GOALKEEPERS_PATH = RAW_STATS_DIR / "all_stats_goalkeepers.csv"
+STATS_NEWS_PATH = RAW_STATS_DIR / "player_news_stats.csv"
 
 TRANSFERS_FIELD_PLAYERS_PATH = TRANSFERS_DIR / "all_transfers_field_players.csv"
 TRANSFERS_GOALKEEPERS_PATH = TRANSFERS_DIR / "all_transfers_goalkeepers.csv"

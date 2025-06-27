@@ -181,7 +181,7 @@ def prepare_stats(stats):
     return stats
 
 
-def prepare_data(season, stats, transfers):
+def prepare_data(season, stats, transfers, news):
     years = season.split("-")
     second_year = years[1]
 
@@ -199,5 +199,11 @@ def prepare_data(season, stats, transfers):
 
     transfers_stats = join_transfers_stats(transfers, stats)
     transfers_stats.drop(["prev_season_start", "season_start"], inplace = True, axis = 1)
-        
+    news_cols = [col for col in news.columns if col != 'player_id']
+
+    transfers_stats = pd.merge(transfers_stats, news, on='player_id', how='left')
+    transfers_stats[news_cols] = transfers_stats[news_cols].fillna(0)
+
+    stats_produccion = pd.merge(stats_produccion, news, on='player_id', how='left')
+    stats_produccion[news_cols] = stats_produccion[news_cols].fillna(0)
     return transfers_stats, stats_produccion
